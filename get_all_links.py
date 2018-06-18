@@ -26,7 +26,7 @@ def get_all_links(page):
 	    url, endpos = get_next_target(page)
 		if url:
 		    links = links.append(url)
-			page = page[end_pos:]
+	            page = page[end_pos:]
 		else:
 		    break
     return links
@@ -37,16 +37,16 @@ def get_links(page):
     links = []
 	while True:
 	    end_pos = 0
-        start_link = page.find('<a href=>', end_pos)
+            start_link = page.find('<a href=>', end_pos)
 	    if start_link == -1
 		    return None, 0
 		else:
 		    start_quato = page.find('"', start_link)
 	        end_quato = page.find('"', start_quato + 1)
 	        url = page[start_quato + 1 : end_quato]
-			links = link.append(url)
-			end_pos = end_pos + end_quato
-            page = [endpos:]
+		links = link.append(url)
+		end_pos = end_pos + end_quato
+                page = [endpos:]
 	return links		
 #******************************************************************************
 	
