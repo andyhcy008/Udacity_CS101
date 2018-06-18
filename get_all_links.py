@@ -24,11 +24,11 @@ def get_all_links(page):
     links = []
 	while True:
 	    url, endpos = get_next_target(page)
-		if url:
-		    links = links.append(url)
-	            page = page[end_pos:]
-		else:
-		    break
+	    if url:
+                links = links.append(url)
+	        page = page[end_pos:]
+            else:
+		break
     return links
 
 			
